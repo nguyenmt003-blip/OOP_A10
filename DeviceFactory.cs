@@ -7,7 +7,7 @@ public static class DeviceFactory
 {
     public static IDevice Create(string type, string name)
     {
-        // chuyen huong tao doi tuong cu the theo loai thiet bi truyen vao
+        // chuyển hướng tạo thiết bị dựa trên loại thiết bị
         return type.Trim().ToLowerInvariant() switch
         {
             "light" => new SmartLight(name),

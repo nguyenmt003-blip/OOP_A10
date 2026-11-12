@@ -18,7 +18,7 @@ public sealed class SmartHomeFacade
 
     public void GoToWork()
     {
-        // goi den tung thiet bi de thuc hien kich ban di lam
+        // gọi đến từng cái khi đi lm
         light.TurnOff();
         fan.TurnOff();
         door.Lock();
@@ -26,12 +26,12 @@ public sealed class SmartHomeFacade
 
     public void GoToSleep()
     {
-        // goi den cac thiet bi de thuc hien kich ban di ngu
+        // gọi đến từng cái khi ngủ
         fan.TurnOff();
         door.Lock();
         light.TurnOn();
 
-        // lay cau hinh muc sang ban dem tu singleton
+        // lấy cấu hình mức sáng ban đêm từ singleton
         int level = HomeConfiguration.Instance.NightLightLevel;
         Console.WriteLine($"Night light level: {level}%");
     }
